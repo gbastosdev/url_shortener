@@ -20,7 +20,7 @@ router = APIRouter(prefix="/api")
 
 @router.get('/urls')
 async def get_urls():
-    return store.keys()
+    return store
 
 @router.get("/urls/{short_code}")
 async def redirect(short_code: str):
